@@ -20,10 +20,10 @@ function App({
     
     address: {
       city,
-      geolocation:{
+     /*  geolocation:{
          lat,
          long 
-      },
+      }, */
       number,
       street,
       zipcode,
@@ -43,10 +43,10 @@ function App({
 
     address: {
       city: '',
-      geolocation:{
+     /*  geolocation:{
          lat: '',
          long: '' 
-      },
+      }, */
       number: '',
       street: '',
       zipcode: '',
@@ -81,8 +81,8 @@ function App({
       street,
       number,
       zipcode,
-      lat,
-      long,
+      /* lat,
+      long, */
       phone
 
     })
@@ -100,8 +100,8 @@ function App({
       street,
       number,
       zipcode,
-      lat,
-      long,
+      /* lat,
+      long, */
       phone
 
     })
@@ -115,10 +115,10 @@ function handleInputChange(name: string, value: string){
     
     address: {
       city,
-      geolocation:{
+      /* geolocation:{
          lat,
          long 
-      },
+      }, */
       number,
       street,
       zipcode,
@@ -149,10 +149,10 @@ function clearInputs(){
 
     address: {
       city: '',
-      geolocation:{
+      /* geolocation:{
          lat: '',
          long: '' 
-      },
+      }, */
       number: '',
       street: '',
       zipcode: '',
@@ -178,14 +178,15 @@ function getOneUser(id: string){
     setState(user)
     window.scrollTo(0, 0)
   })
+
 }
 
 return (
   
   <div className='App'>
     <h1 className='mt-5'>Cadastro de usuários</h1>
-    <div className="form m-5">
-    <div className="row">
+    <form onSubmit={addUser} className="form m-5">
+      <div className="row">
       <div className="col-12 col-md-6">
           <div className="form-group">
               <label>Nome</label>
@@ -194,7 +195,7 @@ return (
                   className="form-control"
                   placeholder="Digite o nome..."
                   name='firstname'
-                  onChange={(e) => handleInputChange("firstname", e.target.value)}
+                  onChange={(e) => handleInputChange('name', e.target.value)}
                   value={firstname}
                   />
           </div>
@@ -207,12 +208,13 @@ return (
                   className="form-control"
                   placeholder="Digite o sobrenome..."
                   name='lastname'
-                  onChange={(e) => handleInputChange("firstname", e.target.value)}
+                  onChange={(e) => handleInputChange("lastname", e.target.value)}
                   value={lastname}
                   />
           </div>
       </div>
-      <div className="col-12 col-md-6">
+      
+      <div className="col-12 col-md-6 mt-3">
           <div className="form-group">
               <label>Login</label>
               <input 
@@ -220,12 +222,12 @@ return (
                   className="form-control"
                   placeholder="Digite o login..."
                   name='username'
-                  onChange={(e) => handleInputChange("firstname", e.target.value)}
+                  onChange={(e) => handleInputChange("username", e.target.value)}
                   value={username}
                   />
           </div>
       </div>
-      <div className="col-12 col-md-6">
+      <div className="col-12 col-md-6 mt-3">
           <div className="form-group">
               <label>Email</label>
               <input 
@@ -233,12 +235,12 @@ return (
                   className="form-control"
                   placeholder="Digite o email..."
                   name='email'
-                  onChange={(e) => handleInputChange("firstname", e.target.value)}
+                  onChange={(e) => handleInputChange("email", e.target.value)}
                   value={email}
                   />
           </div>
       </div>
-      <div className="col-12 col-md-6">
+      <div className="col-12 col-md-6 mt-3">
           <div className="form-group">
               <label>Senha</label>
               <input 
@@ -246,12 +248,12 @@ return (
                   className="form-control"
                   placeholder="Digite a senha..."
                   name='password'
-                  onChange={(e) => handleInputChange("firstname", e.target.value)}
+                  onChange={(e) => handleInputChange("password", e.target.value)}
                   value={password}
                   />
           </div>
       </div>
-      <div className="col-12 col-md-6">
+      <div className="col-12 col-md-6 mt-3">
           <div className="form-group">
               <label>Cidade</label>
               <input 
@@ -259,12 +261,12 @@ return (
                   className="form-control"
                   placeholder="Digite a cidade..."
                   name='city'
-                  onChange={(e) => handleInputChange("firstname", e.target.value)}
+                  onChange={(e) => handleInputChange("address", e.target.value)}
                   value={city}
                   />
           </div>
       </div>
-      <div className="col-12 col-md-6">
+      <div className="col-12 col-md-6 mt-3">
           <div className="form-group">
               <label>Rua</label>
               <input 
@@ -272,12 +274,12 @@ return (
                   className="form-control"
                   placeholder="Digite a rua..."
                   name='street'
-                  onChange={(e) => handleInputChange("firstname", e.target.value)}
+                  onChange={(e) => handleInputChange("street", e.target.value)}
                   value={street}
                   />
           </div>
       </div>
-      <div className="col-12 col-md-6">
+      <div className="col-12 col-md-6 mt-3">
           <div className="form-group">
               <label>Número</label>
               <input 
@@ -285,12 +287,12 @@ return (
                   className="form-control"
                   placeholder="Digite o número..."
                   name='number'
-                  onChange={(e) => handleInputChange("firstname", e.target.value)}
+                  onChange={(e) => handleInputChange("number", e.target.value)}
                   value={number}
                   />
           </div>
       </div>
-      <div className="col-12 col-md-6">
+      <div className="col-12 col-md-6 mt-3">
           <div className="form-group">
               <label>CEP</label>
               <input 
@@ -303,7 +305,7 @@ return (
                   />
           </div>
       </div>
-      <div className="col-12 col-md-6">
+      <div className="col-12 col-md-6 mt-3">
           <div className="form-group">
               <label>Telefone</label>
               <input 
@@ -311,7 +313,7 @@ return (
                   className="form-control"
                   placeholder="Digite o telefone..."
                   name='phone'
-                  onChange={(e) => handleInputChange("firstname", e.target.value)}
+                  onChange={(e) => handleInputChange("phone", e.target.value)}
                   value={phone}
                   />
           </div>
@@ -335,20 +337,7 @@ return (
       </button>
     </div>
   </div>
-</div>
-
-{/*     <form onSubmit={addUser}>
-      <input
-        style={{padding: 12}}
-        placeholder="Nome"
-        name='firstname'
-        onChange={(e) => handleInputChange("firstname", e.target.value)}
-        value={firstname}      
-      />
-      <button style={{padding:12, backgroundColor:"blue", color:"white"}}>
-        {isCreate ? "Add" : "Edit"}
-      </button>
-    </form> */}
+</form>
 
     <div className='gridUser'>
       <h1>Lista de usuários</h1>
