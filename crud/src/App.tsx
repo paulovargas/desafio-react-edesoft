@@ -126,7 +126,7 @@ function handleInputChange(name: string, value: string){
       },
       email,
       id,
-      name:{
+      name: {
           firstname,
           lastname
       },
@@ -261,7 +261,7 @@ return (
                   className="form-control"
                   placeholder="Digite a cidade..."
                   name='city'
-                  onChange={(e) => handleInputChange("address", e.target.value)}
+                  onChange={(e) => handleInputChange('address', e.target.value)}
                   value={city}
                   />
           </div>
@@ -327,11 +327,9 @@ return (
       {isCreate ? "Salvar" : "Alterar"}
       </button>
       
-      <button 
-        
+      <button         
         className="btn btn-secondary m-2"
-        onClick={() => clearInputs()}
-        
+        onClick={() => clearInputs()}        
         >
         Cancelar
       </button>
