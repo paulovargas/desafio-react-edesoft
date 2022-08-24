@@ -43,10 +43,6 @@ function App({
 
     address: {
       city: '',
-     /*  geolocation:{
-         lat: '',
-         long: '' 
-      }, */
       number: '',
       street: '',
       zipcode: '',
@@ -81,8 +77,6 @@ function App({
       street,
       number,
       zipcode,
-      /* lat,
-      long, */
       phone
 
     })
@@ -100,8 +94,6 @@ function App({
       street,
       number,
       zipcode,
-      /* lat,
-      long, */
       phone
 
     })
@@ -110,15 +102,11 @@ function App({
     clearInputs()
   }
 
-function handleInputChange(name: string, value: string){
+function handleInputChange( name: string, value: string){
   setState({
     
     address: {
       city,
-      /* geolocation:{
-         lat,
-         long 
-      }, */
       number,
       street,
       zipcode,
@@ -149,10 +137,6 @@ function clearInputs(){
 
     address: {
       city: '',
-      /* geolocation:{
-         lat: '',
-         long: '' 
-      }, */
       number: '',
       street: '',
       zipcode: '',
@@ -208,7 +192,7 @@ return (
                   className="form-control"
                   placeholder="Digite o sobrenome..."
                   name='lastname'
-                  onChange={(e) => handleInputChange("lastname", e.target.value)}
+                  onChange={(e) => handleInputChange('name', e.target.value)}
                   value={lastname}
                   />
           </div>
@@ -222,7 +206,7 @@ return (
                   className="form-control"
                   placeholder="Digite o login..."
                   name='username'
-                  onChange={(e) => handleInputChange("username", e.target.value)}
+                  onChange={(e) => handleInputChange('username', e.target.value)}
                   value={username}
                   />
           </div>
@@ -235,7 +219,7 @@ return (
                   className="form-control"
                   placeholder="Digite o email..."
                   name='email'
-                  onChange={(e) => handleInputChange("email", e.target.value)}
+                  onChange={(e) => handleInputChange('email', e.target.value)}
                   value={email}
                   />
           </div>
@@ -248,7 +232,7 @@ return (
                   className="form-control"
                   placeholder="Digite a senha..."
                   name='password'
-                  onChange={(e) => handleInputChange("password", e.target.value)}
+                  onChange={(e) => handleInputChange('password', e.target.value)}
                   value={password}
                   />
           </div>
@@ -274,7 +258,7 @@ return (
                   className="form-control"
                   placeholder="Digite a rua..."
                   name='street'
-                  onChange={(e) => handleInputChange("street", e.target.value)}
+                  onChange={(e) => handleInputChange('address', e.target.value)}
                   value={street}
                   />
           </div>
@@ -287,7 +271,7 @@ return (
                   className="form-control"
                   placeholder="Digite o número..."
                   name='number'
-                  onChange={(e) => handleInputChange("number", e.target.value)}
+                  onChange={(e) => handleInputChange('address', e.target.value)}
                   value={number}
                   />
           </div>
@@ -300,7 +284,7 @@ return (
                   className="form-control"
                   placeholder="Digite o CEP..."
                   name='zipcode'
-                  onChange={(e) => handleInputChange("zipcode", e.target.value)}
+                  onChange={(e) => handleInputChange('address', e.target.value)}
                   value={zipcode}
                   />
           </div>
@@ -313,7 +297,7 @@ return (
                   className="form-control"
                   placeholder="Digite o telefone..."
                   name='phone'
-                  onChange={(e) => handleInputChange("phone", e.target.value)}
+                  onChange={(e) => handleInputChange('phone', e.target.value)}
                   value={phone}
                   />
           </div>
