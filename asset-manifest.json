@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/desafio-react-edesoft/static/css/main.f9e0ecfa.css",
+    "main.js": "/desafio-react-edesoft/static/js/main.ba8aa1ae.js",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/desafio-react-edesoft/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/fontawesome-webfont.eot": "/desafio-react-edesoft/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/desafio-react-edesoft/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/desafio-react-edesoft/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/desafio-react-edesoft/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "index.html": "/desafio-react-edesoft/index.html",
+    "main.f9e0ecfa.css.map": "/desafio-react-edesoft/static/css/main.f9e0ecfa.css.map",
+    "main.ba8aa1ae.js.map": "/desafio-react-edesoft/static/js/main.ba8aa1ae.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f9e0ecfa.css",
+    "static/js/main.ba8aa1ae.js"
+  ]
+}
